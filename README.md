@@ -1,66 +1,85 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Assignment
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Introduction
 
-## About Laravel
+This project is a web application that provides authentication and user management functionalities. Users can register, log in, reset their password, and access various features based on their role (user or admin).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Accessing the Application
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+You can access the online website by clicking [here](https://phplaravel-1260354-4532103.cloudwaysapps.com/). If you're not authenticated, you'll be redirected to the login page.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This is the credential for admin:
+- **Email:** admin@gmail.com
+- **Password:** Admin@123
 
-## Learning Laravel
+And this is the ready credential for user:
+- **Email:** masstarkimi@gmail.com
+- **Password:** Hakimi@123
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![Login Page](/public/img/readme1.jpeg)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Registration
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+In the login page, you'll find "Register" and "Forgot Password" buttons. Clicking "Register" will redirect you to the registration page.
 
-## Laravel Sponsors
+![Registration Page](/public/img/readme2.jpeg)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Validation
 
-### Premium Partners
+Error messages will be displayed if your input does not meet the validation rules.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+![Validation Error](/public/img/readme3.jpeg)
 
-## Contributing
+## Email Verification
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+After registration, you'll receive a verification email. Click the button in the email to verify your account and you'll be redirected to the homepage.
 
-## Code of Conduct
+## Forgot Password
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Clicking the "Forgot Password" button on the login page will prompt you to enter your signed-up email. An email will be sent to you for password reset.
 
-## Security Vulnerabilities
+![Password Reset Page](/public/img/readme4.jpeg)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Homepage
 
-## License
+After successful login, users will be redirected to the homepage where a table will be displayed. Admins will have an additional "Dashboard" button in the header.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### User Homepage
+
+![User Homepage](/public/img/readme5.jpeg)
+
+### Admin Homepage
+
+![Admin Homepage](/public/img/readme6.jpeg)
+
+## Admin Dashboard
+
+After clicking the "Dashboard" button, admins will be redirected to the admin dashboard.
+
+![Admin Dashboard](/public/img/readme8.jpeg)
+
+### User Management
+
+Admins can view user and data management functionalities from the dashboard.
+
+#### User Table
+
+![User Table](/public/img/readme7.jpeg)
+
+#### Data Table
+
+![Data Table](/public/img/readme8.jpeg)
+
+## Adding New Data
+
+On the top right of the data table, there's an "Add New" button. Clicking it allows admins to add new data.
+
+![Add New Data](/public/img/readme9.jpeg)
+
+## Editing and Deleting Data
+
+Each row in the data table has "Edit" and "Delete" icons on the very right. Clicking them enables admins to edit or delete the corresponding data. Changes made here will reflect on the homepage.
+
+![Edit Delete](/public/img/readme10.jpeg)
+
+--- 
