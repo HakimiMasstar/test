@@ -1,25 +1,59 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-    </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alphv - assigment</title>
 
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<!-- CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 
-    <form method="POST" action="{{ route('password.email') }}">
-        @csrf
+<!-- JavaScript (order matters, jQuery first then Bootstrap JS) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+  </head>
+  <body>
+
+  <section class="vh-100 mt-5">
+    <div class="container h-100">
+      <div class="row justify-content-sm-center h-100">
+        <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+          <div class="card shadow-lg">
+            <div class="card-body p-5">
+              <h1 class="fs-4 card-title fw-bold mb-4">Forgot Password</h1>
+
+                    <form method="POST" action="{{ route('password.email') }}">
+                    @csrf
+
+                    <div class="mb-3">
+
+                        <!-- Session Status -->
+                        <x-auth-session-status class="mb-4" style="color: green;" :status="session('status')" />
+
+                        @if($errors->any())
+                            <div class="alert alert-danger mb-3 p-2" style="font-size: 14px; border-radius: 2px;">
+                                {{ $errors->first() }}
+                            </div>
+                        @endif
+
+                        <div class="mb-4">
+                            {{ __('Enter your email') }}
+                        </div>
+
+                        <input name="email" type="email" class="p-2 custom-form-input form-control @if($errors->has('email')) {{'is-invalid'}} @endif" placeholder="Email">
+
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Send</button>
+
+                    </form>
+
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+    </body>
+</html>
