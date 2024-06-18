@@ -6,7 +6,7 @@ This project is a web application that provides authentication and user manageme
 
 ## Accessing the Application
 
-You can access the online website by clicking [here](https://phplaravel-1260354-4532103.cloudwaysapps.com/). If you're not authenticated, you'll be redirected to the login page.
+You can access the online website by clicking [here](http://alphvtest.masstarcode.com/). If you're not authenticated, you'll be redirected to the login page.
 
 This is the credential for admin:
 - **Email:** admin@gmail.com
